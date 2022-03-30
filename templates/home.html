@@ -1,0 +1,17 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block title %}{% endblock title %}
+
+{% block content %}
+<h1>HomePage</h1>
+<img class="cover" src="{% static 'images/Balbo_Baggins.jpg' %}">
+{% if user.is_authenticated %}
+    Hi {{ user.email }}
+    <p><a href="{% url 'account_logout' %}">Log Out</a></p>
+{% else %}
+    <p> You are not Logged in</p>
+
+    <a href="{% url 'account_login' %}"> Log In</a>
+    <a href="{% url 'account_signup' %}"> Signup</a>
+{% endif %}
+{% endblock content %}
