@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
+    'books.apps.BooksConfig',
 
 ]
 
@@ -162,3 +163,5 @@ ACCOUNT_LOGOUT_REDIRECT = 'home' # new
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 
 SITE_ID = 1
+
+DEFAULT_FROM_EMAIL = 'admin@djangobookstore.com'
