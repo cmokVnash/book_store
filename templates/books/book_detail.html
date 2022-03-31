@@ -9,4 +9,13 @@
     <p>Price: {{book.price}}</p>
 </div>
 
+<div>
+<h3> REVIEWS </h3>
+    <ul>
+        {% for review in book.reviews.all %}
+        <li>{{review.review}} ({{review.author}})</li>
+        {% endfor %}
+    </ul>
+
+</div>
 {% endblock content %}
